@@ -1,4 +1,4 @@
 ruqya
 =====
 
-Automated SVG chart and graph generation using d3 and PhantomJS.
+Generate charts and graphs from the command line using d3 and PhantomJS.

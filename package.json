@@ -1,0 +1,32 @@
+{
+  "name": "ruqya",
+  "version": "0.1.0",
+  "description": "Generate charts and graphs from the command line using d3 and PhantomJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manleyjster/ruqya.git"
+  },
+  "keywords": [
+    "phantomjs",
+    "chart",
+    "graph",
+    "d3",
+    "data",
+    "visualization"
+  ],
+  "dependencies": {
+    "commander": "~2.3.0",
+    "augment": "~4.3.0",
+    "phantomjs": "~1.9.0"
+  },
+  "author": "Justin Manley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manleyjster/ruqya/issues"
+  },
+  "homepage": "https://github.com/manleyjster/ruqya"
+}
