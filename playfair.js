@@ -2,7 +2,7 @@
 
 var playfair = require("commander"),
 	pkg = require(__dirname + '/package.json'),
-	launch = require(__dirname + "/src/launcher");
+	capture = require("./src/capture");
 
 playfair
 	.version(pkg.version)
@@ -17,8 +17,9 @@ playfair
 
 var options = {
 	svgID: playfair.id,
+	global: false,
+	output: playfair.output,
 	htmlFile: playfair.args[0],
-	global: false
 };
 
-launch(options);
+capture(options);
