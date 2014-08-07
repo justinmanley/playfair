@@ -1,14 +1,17 @@
 var path = require("path"),
-	childProcess = require("child_process"),
-	phantomjs = require("phantomjs");
+	phantomjs = require("phantomjs"),
+	phantom = require("phantom");
+
 
 module.exports = function(options) {
-	var phantomBin = phantomjs.path,
-		childArgs = [path.join(__dirname, 'load.js'), options.htmlFile]
+	var htmlFile = options.htmlFile;
 
-	// maybe need to set all of the options as environment variables?
-
-	childProcess.execFile(phantomBin, childArgs, function(err, stdout, stderr) {
-		console.log('hello');
+	phantom.create({ binary: phantomjs.path }, function(ph) {
+		ph.createPage(function(page) {
+			page.open(htmlFile, function(status) {
+				console.log("opened file? ", status);
+				ph.exit();
+			});
+		});
 	});
 }

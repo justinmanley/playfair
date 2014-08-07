@@ -17,7 +17,8 @@ playfair
 
 var options = {
 	svgID: playfair.id,
-	htmlFile: playfair.args[0]
+	htmlFile: playfair.args[0],
+	global: false
 };
 
 launch(options);
