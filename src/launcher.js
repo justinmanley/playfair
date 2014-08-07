@@ -2,12 +2,13 @@ var path = require("path"),
 	childProcess = require("child_process"),
 	phantomjs = require("phantomjs");
 
-module.exports = function() {
-	var bin = phantomjs.path,
-		childArgs = [path.join(__dirname, 'phantomjs-script.js')]
+module.exports = function(options) {
+	var phantomBin = phantomjs.path,
+		childArgs = [path.join(__dirname, 'load.js'), options.htmlFile]
 
-	childProcess.execFile(bin, childArgs, function(err, stdout, stderr) {
+	// maybe need to set all of the options as environment variables?
+
+	childProcess.execFile(phantomBin, childArgs, function(err, stdout, stderr) {
 		console.log('hello');
-		console.log(err);
 	});
 }
