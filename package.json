@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "Generate charts and graphs from the command line using d3 and PhantomJS.",
   "main": "index.js",
+  "bin": { "playfair": "./playfair.js" },
+  "files": [ "src" ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
